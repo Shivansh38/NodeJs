@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // Define MongoDB URL
-const mongoURL = 'mongodb://127.0.0.1/hotel';
+const mongoURL = process.env.DB_URL;
 
 // Set up Mongoose connection
 mongoose.connect(mongoURL, {
- 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 // Default connection
@@ -20,6 +22,3 @@ db.on('error', (err) => {
 });
 
 module.exports = db;
-
-
-
