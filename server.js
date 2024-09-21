@@ -38,6 +38,7 @@ app.use('/user',userRoutes);
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000'); // Log a message indicating that the server has started successfully
 });
+/// test
 
 
 // comments added for testing purpose
